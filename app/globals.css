@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  /* --- Brand Colors --- */
+  --color-legal-navy: #0A142F;
+  --color-legal-gold: #C5A880;
+  --color-legal-goldHover: #A68A61;
+  --color-legal-charcoal: #1E293B;
+  --color-legal-parchment: #F8FAFC;
+  --color-legal-crimson: #881337;
+
+  /* --- Typography (CSS vars set by next/font in layout.tsx) --- */
+  --font-serif: var(--font-playfair), 'Playfair Display', serif;
+  --font-sans: var(--font-inter), 'Inter', sans-serif;
+
+  /* --- Animations --- */
+  --animate-fade-in-up: fade-in-up 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  --animate-fade-in: fade-in 0.5s ease-out forwards;
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+body {
+  scroll-behavior: smooth;
+  background-color: #0A142F;
+  color: #F8FAFC;
+}
